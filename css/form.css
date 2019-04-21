@@ -76,3 +76,28 @@ button a{
     color: white;
     text-decoration: none;
 }
+
+footer{
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer p{
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+footer p a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+footer address{
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+}
