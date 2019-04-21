@@ -1,0 +1,44 @@
+body{
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 1366px 768px;
+}
+
+nav{
+    position: sticky;
+}
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+header li{
+    float: left;
+    overflow: hidden;
+}
+
+#logo{
+    /*display: block;*/
+    padding: 20px 16px;
+}
+
+#logo:hover{
+    transform: scale(1.2);
+    transform: scale(20 30);
+}
+
+header div li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 50px 40px;
+    text-decoration: none;
+}
+
+header div li a:hover{
+    background-color: #1c7430;
+}
