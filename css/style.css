@@ -21,12 +21,20 @@ header li{
     overflow: hidden;
 }
 
-#logo{
+.logo{
     /*display: block;*/
+    width: 15%;
+    background-color: yellow;
+    border-radius: 50%;
     padding: 20px 16px;
 }
 
-#logo:hover{
+img.avatar{
+    width: 20%;
+    height: 20%;
+}
+
+.logo:hover{
     transform: scale(1.2);
     transform: scale(20 30);
 }

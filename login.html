@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Login To Hunngry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\loginform.css">
 </head>
 <body>
 <header>
     <nav>
         <ul>
-            <li id="logo"><a href="#index.html"><img src="images/logo.png" alt="Home" width="75px" height="75px"></a></li>
+            <li class="logo"><a href="index.html"><img src="images/logo.png" alt="Home" width="75px" height="75px"></a></li>
             <div>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -23,6 +25,33 @@
 <!--<hr>-->
 <main>
 
+        <h1>Login Here</h1>
+    <div id="login-form">
+        <form action="/action_page.php">
+            <div class="imgcontainer">
+                <img class="avatar" src="images/logo.png" alt="Avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="pass"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <h3 class="signupbttn"><a href="register.html">Sign Up</a></h3>
+                <span class="pass">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+
+    </div>
 </main>
 <!--<hr>-->
 <footer>
