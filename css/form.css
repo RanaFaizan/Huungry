@@ -3,18 +3,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 h1{
     width: 100%;
-    background-color: #45a049;
+    background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 10px;
+    margin-top: -17px;
 }
 
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
@@ -25,7 +26,7 @@ input[type=date], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
@@ -36,7 +37,7 @@ input[type=password], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
@@ -44,16 +45,25 @@ input[type=password], select, textarea {
 }
 
 input[type=submit] {
+    width: 100%;
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+.selection{
+    width: 100%;
+}
+
+span{
+    font-family: "Lucida Sans", sans-serif;
 }
 
 .container {

@@ -30,12 +30,12 @@ a{
     text-decoration: none;
 }
 
-i{
+a i{
     color: white;
     font-size: x-large;
 }
 
-i:hover{
+a i:hover{
     color: cornflowerblue;
     cursor: pointer;
 }
