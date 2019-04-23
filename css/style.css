@@ -9,25 +9,103 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
-nav{
-    position: sticky;
+body, html{
+    font-size: 100%;
+    font-family: "Helvetica", sans-serif;
 }
-header ul{
-    list-style-type: none;
-    margin: 0;
+body,html{
+    margin:0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    border-radius: 10px;
 }
 
-header li{
-    float: left;
-    overflow: hidden;
+nav ul{
+    list-style: none;
+    padding:0;
+    background:#444;
 }
 
+nav ul li a{
+    color:#ddd;
+    text-decoration: none;
+    padding: .8rem 1rem;
+    display: block;
+    line-height: 1;
+}
+nav ul li{
+    border-bottom: 1px dotted #ddd;
+}
+/*styling logo*/
+
+/*nav div:first-child{*/
+    /*background:yellow;*/
+/*}*/
+nav div:first-child h1{
+    line-height: 0;
+    padding: .8rem 0rem;
+    text-align: center;
+}
+
+nav div:first-child h1, nav ul{
+    margin:0;
+}
+
+/*Styling for larger devices*/
+
+@media only screen and (min-width: 30em){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background: #222;
+        align-items: center;
+    }
+
+    nav ul{
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        background:none;
+        flex-wrap: wrap;
+    }
+    nav div:first-child h1{
+        padding: 0;
+        margin:0 1rem;
+    }
+    nav div:first-child img{
+        height: 40px;
+
+    }
+    nav ul li{
+        border-bottom:none;
+        flex: 1 0 auto;
+        position: relative;
+    }
+    nav ul li a{
+        padding:1.2rem 1rem;
+    }
+    nav ul li a::before, nav ul li a::after{
+        content: "";
+        position: absolute;
+        bottom:0;
+        right: 0;
+        width:0%;
+        height: 2px;
+        background:red;
+        transition: .2s width ease-in-out;
+    }
+
+    nav ul li a::before{
+        left:0;
+    }
+
+    nav ul li a:hover::after,nav ul li a:hover::before{
+        width: 50%;
+    }
+
+}
 .home{
     /*display: block;*/
     width: 15%;
@@ -45,25 +123,12 @@ img.logo{
     transform: scale(1.2);
     transform: scale(20 30);
 }
-
-header div li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 70px 50px;
-    text-decoration: none;
-}
-
 .search_bar{
     width: 100%;
     display: block;
     color: white;
     text-align: center;
-    padding: 50px 50px;
+    margin-top: 2px;
     text-decoration: none;
     background-image: url('images\searchicon.ico');
-}
-
-header div li a:hover{
-    background-color: #1c7430;
 }

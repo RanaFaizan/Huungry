@@ -1,17 +1,12 @@
 .column {
-    float: left;
     width: 100%;
-    padding: 10px;
-    height: 15em; /* Should be removed. Only for demonstration */
-    background-color: #1d2124;
+    height: 15em;
+    padding: 12px;
+    bottom: 0;
+    background-color: #000000;
 }
 
 /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 img.logo{
     background-color: yellow;

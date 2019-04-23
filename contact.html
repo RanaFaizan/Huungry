@@ -17,83 +17,91 @@
 <body>
 <header>
     <nav>
+        <div>
+            <a href="index.html"><img src="images/logo1.png" alt="Home"></a>
+        </div>
+
         <ul>
-            <li class="home"><a href="index.html"><img class="logo" src="images/logo.png" alt="Home"></a></li>
-            <div>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="forget-password.html">Forget-Password</a></li>
-                <li><div class="search_bar"><input type="text" name="search" placeholder="Search.."></div></li>
-            </div>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="forget-password.html">Forget-Password</a></li>
+            <li><div class="search_bar"><input type="text" name="search" placeholder="Search.."></div></li>
         </ul>
     </nav>
 </header>
 <!--<hr>-->
 <main>
-    <div class="container">
-        <form action="/action_page.php">
+    <div class="fullcontainer">
+        <div class="container col-10">
+            <form action="/action_page.php">
 
-            <div class="row">
-                <div class="col-12">
-                    <h1>Contact US</h1>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="col col-2"><label for="fname"><span>First Name</span></label></div>
-                <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.."></div>
-
-                <div class="col col-2"><label for="lname"><span>Last Name</span></label></div>
-                <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.."></div>
-
-            </div>
-
-           <div class="row">
-
-               <div class="col col-2"><label for="email"><span>Email</span></label></div>
-               <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.."></div>
-
-               <div class="col col-2"><label for="pnum"><span>Phone Number</span></label></div>
-               <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.."></div>
-
-           </div>
-
-            <div class="row">
-
-                <div class="col col-2"><label for="city">City</label></div>
-
-                <div  class="col col-10">
-                    <select id="city" class="selection" name="city">
-                        <option value="lahore">Lahore</option>
-                        <option value="lahore">Karachi</option>
-                        <option value="lahore">Peshawar</option>
-                        <option value="lahore">Queta</option>
-                        <option value="lahore">Islamabad</option>
-                    </select>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Contact US</h1>
+                    </div>
                 </div>
 
-            </div>
+                <div class="row">
 
-            <div class="row">
+                    <div class="col col-2"><label for="fname"><span>First Name</span></label></div>
+                    <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.."></div>
 
-                <div class="col col-2"><label for="message"><span>Message</span></label></div>
-                <div class="col col-10"><textarea id="message" rows="7" name="message" placeholder="Write something.."></textarea></div>
+                    <div class="col col-2"><label for="lname"><span>Last Name</span></label></div>
+                    <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.."></div>
 
-            </div>
-
-            <div class="row">
-                <div class="col col-1">
-                    <input class="submitBTTN" type="submit" value="Submit">
                 </div>
-            </div>
 
-        </form>
+               <div class="row">
+
+                   <div class="col col-2"><label for="email"><span>Email</span></label></div>
+                   <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.."></div>
+
+                   <div class="col col-2"><label for="pnum"><span>Phone Number</span></label></div>
+                   <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.."></div>
+
+               </div>
+
+                <div class="row">
+
+                    <div class="col col-2"><label for="city">City</label></div>
+
+                    <div  class="col col-10">
+                        <select id="city" class="selection" name="city">
+                            <option value="lahore">Lahore</option>
+                            <option value="lahore">Karachi</option>
+                            <option value="lahore">Peshawar</option>
+                            <option value="lahore">Queta</option>
+                            <option value="lahore">Islamabad</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col col-2"><label for="message"><span>Message</span></label></div>
+                    <div class="col col-10"><textarea id="message" rows="7" name="message" placeholder="Write something.."></textarea></div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col col-2">
+                        <input class="submitBTTN" type="submit" value="Submit">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="fullcontainer">
+        <div class="col-10">
+            <div id="map"></div>
+        </div>
     </div>
 </main>
-<hr>
+<!--<hr>-->
 <footer>
 
     <div class="row">
@@ -108,28 +116,30 @@
 
         <div class="col-3 column">
             <a href="about.html"><h2>About Us</h2></a>
-            <p>
-                Developed By<br>
-                Rana Faizan Ur Rahman Khan,<br>
-                Hamza Rehman<br>
-            </p>
+            <div>
+                <address>
+                    Developed By<br>
+                    Rana Faizan Ur Rahman Khan,<br>
+                    Hamza Rehman<br>
+                </address>
+            </div>
 
         </div>
 
         <div class="col-3 column">
+
             <a  href="contact.html"><h2>Contact Us</h2></a>
-            <p>
+            <div>
             <address>
-                Email: faizi_733@ucp.edu.pk
-            </address>
-            </p>
-
-            <p>
+                Email: faizi_733@ucp.edu.pk<br>
                 Phone: 090078601
-            </p>
+            </address>
+            </div>
+
         </div>
 
         <div class="col-3 column">
+
             <a href="about.html"><h2>Stay Connected</h2></a>
             <div class="icons">
                 <a class="icon1" href="about.html"><i class="fab fa-facebook-square"></i></a>
@@ -143,5 +153,24 @@
     </div>
 
 </footer>
+
+<script>
+    function initMap() {
+        var test= {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: test
+        });
+        var marker = new google.maps.Marker({
+            position: test,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src=
+                "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
 </body>
 </html>
