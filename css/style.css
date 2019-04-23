@@ -198,11 +198,10 @@ main{
     display:none;
     width: 100%;
     height: 50%;
-    /*border-bottom: 1em solid red;*/
-    /*border-left: 1em solid red;*/
-    /*border-right: 1em solid red;*/
-    /*border-radius: 20px;*/
-    /*margin-bottom: -750px;*/
+    border-bottom: 1em solid dimgray;
+    border-left: 1em solid dimgray;
+    border-right: 1em solid dimgray;
+    border-radius: 20px;
 }
 
 .vid{
