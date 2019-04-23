@@ -54,6 +54,16 @@ header div li a{
     text-decoration: none;
 }
 
+.search_bar{
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+    text-decoration: none;
+    background-image: url('images\searchicon.ico');
+}
+
 header div li a:hover{
     background-color: #1c7430;
 }
