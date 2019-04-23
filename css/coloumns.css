@@ -31,11 +31,25 @@ a{
 }
 
 a i{
-    color: white;
     font-size: x-large;
 }
 
-a i:hover{
-    color: cornflowerblue;
+.icon1:hover{
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.icon2:hover{
+    color: deepskyblue;
+    cursor: pointer;
+}
+
+.icon3:hover{
+    color: orangered;
+    cursor: pointer;
+}
+
+.icon4:hover{
+    color: #fb3958;
     cursor: pointer;
 }
