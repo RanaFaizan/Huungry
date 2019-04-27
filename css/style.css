@@ -334,7 +334,7 @@ input[type=password], select, textarea {
     resize: vertical;
 }
 
-input[type=submit] {
+input[type=submit], .submitBTTN {
     width: 100%;
     background-color: #33b5e5;
     color: white;
@@ -344,7 +344,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, .submitBTTN:hover {
     background-color: #45a049;
 }
 
