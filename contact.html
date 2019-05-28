@@ -48,20 +48,20 @@
                 <div class="row">
 
                     <div class="col col-2"><label for="fname"><span>First Name</span></label></div>
-                    <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.." required pattern="[A-Za-z]{3}"></div>
+                    <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.." required pattern="([A-Z]|[a-z]){2,}"></div>
 
                     <div class="col col-2"><label for="lname"><span>Last Name</span></label></div>
-                    <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.." required pattern="..."></div>
+                    <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.." required pattern="([A-Z]|[a-z]){2,}"></div>
 
                 </div>
 
                <div class="row">
 
                    <div class="col col-2"><label for="email"><span>Email</span></label></div>
-                   <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.." required pattern="..."></div>
+                   <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.." required pattern="[a-z]+(\w|\.|)?(([a-z]|[0-9])*)?@(([a-z]{3,7}\.com)|([a-z]{3,5}\.[a-z]{3,5}\.[a-z]{2,4}))"></div>
 
                    <div class="col col-2"><label for="pnum"><span>Phone Number</span></label></div>
-                   <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.." required pattern="..."></div>
+                   <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.." required pattern="(((03)[0-4][0-9]\d[0-9]{6})|((03)[0-4][0-9]-[0-9]{7})|(\+(923)[0-4][0-9]\d[0-9]{6})|(\+(923)[0-4][0-9]-[0-9]{7}))"></div>
 
                </div>
 
