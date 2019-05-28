@@ -29,7 +29,7 @@
             <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Register</a></li>
             <li><a href="forget-password.html">Forget-Password</a></li>
-            <li><div class="search_bar"><input type="text" name="search" placeholder="Search.."></div></li>
+            <li><div class="search_bar"><input class="search_b" type="text" name="search" placeholder="Search.."></div></li>
         </ul>
     </nav>
 </header>
@@ -48,20 +48,20 @@
                 <div class="row">
 
                     <div class="col col-2"><label for="fname"><span>First Name</span></label></div>
-                    <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.."></div>
+                    <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.." required pattern="[A-Za-z]{3}"></div>
 
                     <div class="col col-2"><label for="lname"><span>Last Name</span></label></div>
-                    <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.."></div>
+                    <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.." required pattern="..."></div>
 
                 </div>
 
                <div class="row">
 
                    <div class="col col-2"><label for="email"><span>Email</span></label></div>
-                   <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.."></div>
+                   <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.." required pattern="..."></div>
 
                    <div class="col col-2"><label for="pnum"><span>Phone Number</span></label></div>
-                   <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.."></div>
+                   <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.." required pattern="..."></div>
 
                </div>
 

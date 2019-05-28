@@ -348,6 +348,20 @@ input[type=submit]:hover, .submitBTTN:hover {
     background-color: #45a049;
 }
 
+input[type=text]:not(.search_b):valid{
+    background-image: url("../images/tick.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 2em;
+}
+
+input[type=password]:not(.search_b):valid{
+    background-image: url("../images/tick.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 2em;
+}
+
 .selection{
     width: 100%;
 }
