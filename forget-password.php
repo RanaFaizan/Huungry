@@ -5,7 +5,7 @@
     <title>Forget Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Food Delivey">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="keywords" content="hungry forgot password">
     <meta name="author" content="Rana Faizan Ur Rahman Khan, Hamza Rehman">
 
     <link rel="stylesheet" href="css\style.css">
@@ -20,21 +20,21 @@
 <header>
     <nav>
         <div>
-            <a href="index.html"><img src="images/logo1.png" alt="Home"></a>
+            <a href="index.php"><img src="images/logo1.png" alt="Home"></a>
         </div>
 
         <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="forget-password.html">Forget-Password</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="forget-password.php">Forget-Password</a></li>
             <li><div class="search_bar"><input class="search_b" type="text" name="search" placeholder="Search.."></div></li>
         </ul>
     </nav>
 </header>
 <!--<hr>-->
-<main class="f2">
+<main class="f1">
     <div class="fullcontainer">
         <div class="container col-10">
             <form action="/action_page.php">
@@ -47,24 +47,14 @@
 
                 <div class="row">
 
-                    <div class="col col-2"><label for="email"><span>Email</span></label></div>
+                    <div class="col col-1"><label for="email"><span>Email</span></label></div>
                     <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.." required pattern="[a-z]+(\w|\.|)?(([a-z]|[0-9])*)?@(([a-z]{3,7}\.com)|([a-z]{3,5}\.[^com]{3,5}\.pk))"></div>
 
                 </div>
 
                 <div class="row">
-                    <div class="col col-2"><label for="npass"><span>New Password</span></label></div>
-                    <div class="col col-4"><input type="password" id="npass" name="npass" placeholder="Your new password.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-2"><label for="cpass"><span>Confirm</span></label></div>
-                    <div class="col col-4"><input type="password" id="cpass" name="cpass" placeholder="Confirm password.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
-                </div>
-
-                <div class="row">
                     <div class="col col-2">
-                        <input class="submitBTTN" type="submit" value="Change Password">
+                        <input class="submitBTTN" type="submit" value="submit">
                     </div>
                 </div>
 
@@ -73,20 +63,20 @@
     </div>
 </main>
 <!--<hr>-->
-<<footer>
+<footer>
 
     <div class="row">
 
         <div class="hide col-3 column">
 
             <ul>
-                <a href="index.html"><img class="logo" src="images/logo.png" alt="Home"></a>
+                <a href="index.php"><img class="logo" src="images/logo.png" alt="Home"></a>
             </ul>
 
         </div>
 
         <div class="col-3 column">
-            <a href="about.html"><h2>About Us</h2></a>
+            <a href="about.php"><h2>About Us</h2></a>
             <div>
                 <address>
                     Developed By<br>
@@ -99,7 +89,7 @@
 
         <div class="col-3 column">
 
-            <a  href="contact.html"><h2>Contact Us</h2></a>
+            <a  href="contact.php"><h2>Contact Us</h2></a>
             <div>
                 <address>
                     Email: faizi_733@ucp.edu.pk<br>
@@ -111,12 +101,12 @@
 
         <div class="col-3 column">
 
-            <a href="about.html"><h2>Stay Connected</h2></a>
+            <a href="about.php"><h2>Stay Connected</h2></a>
             <div class="icons">
-                <a class="icon1" href="about.html"><i class="fab fa-facebook-square"></i></a>
-                <a class="icon2" href="about.html"><i class="fab fa-twitter"></i></a>
-                <a class="icon3" href="about.html"><i class="fab fa-youtube"></i></a>
-                <a class="icon4" href="about.html"><i class="fab fa-instagram"></i></a>
+                <a class="icon1" href="about.php"><i class="fab fa-facebook-square"></i></a>
+                <a class="icon2" href="about.php"><i class="fab fa-twitter"></i></a>
+                <a class="icon3" href="about.php"><i class="fab fa-youtube"></i></a>
+                <a class="icon4" href="about.php"><i class="fab fa-instagram"></i></a>
             </div>
 
         </div>

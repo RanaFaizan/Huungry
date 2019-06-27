@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forget Password</title>
+    <title>About US</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Food Delivey">
+    <meta name="keywords" content="hungry audio, hungry video">
     <meta name="author" content="Rana Faizan Ur Rahman Khan, Hamza Rehman">
 
     <link rel="stylesheet" href="css\style.css">
@@ -19,39 +20,40 @@
 <header>
     <nav>
         <div>
-            <a href="index.html"><img src="images/logo1.png" alt="Home"></a>
+            <a href="index.php"><img src="images/logo1.png" alt="Home"></a>
         </div>
 
         <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="forget-password.html">Forget-Password</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="forget-password.php">Forget-Password</a></li>
             <li><div class="search_bar"><input class="search_b" type="text" name="search" placeholder="Search.."></div></li>
         </ul>
     </nav>
 </header>
 <!--<hr>-->
-<main class="f3">
-    <div class="fullcontainer">
-        <div class="container col-12">
-            <form action="/action_page.php">
+<main>
 
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Forgot Password</h1>
-                    </div>
-                </div>
+    <div class="row">
 
-                <div class="row">
-
-                    <div class="col col-12"><span><p>Verification link is sent to your specified email, Please Confirm and Reset your Password.</p></span></div>
-
-                </div>
-
-            </form>
+        <div class="col col-10">
+            <div class="aside">
+                <h2>​Thats What we are doing.</h2>
+                <p>//////////////////////////////////////</p>
+            </div>
         </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col col-10">
+            <iframe class="col-12" height="400px" src="https://www.youtube.com/embed/-nrTwXcfRKg"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
     </div>
 </main>
 <!--<hr>-->
@@ -62,13 +64,13 @@
         <div class="hide col-3 column">
 
             <ul>
-                <a href="index.html"><img class="logo" src="images/logo.png" alt="Home"></a>
+                <a href="index.php"><img class="logo" src="images/logo.png" alt="Home"></a>
             </ul>
 
         </div>
 
         <div class="col-3 column">
-            <a href="about.html"><h2>About Us</h2></a>
+            <a href="about.php"><h2>About Us</h2></a>
             <div>
                 <address>
                     Developed By<br>
@@ -81,7 +83,7 @@
 
         <div class="col-3 column">
 
-            <a  href="contact.html"><h2>Contact Us</h2></a>
+            <a  href="contact.php"><h2>Contact Us</h2></a>
             <div>
                 <address>
                     Email: faizi_733@ucp.edu.pk<br>
@@ -93,12 +95,12 @@
 
         <div class="col-3 column">
 
-            <a href="about.html"><h2>Stay Connected</h2></a>
+            <a href="about.php"><h2>Stay Connected</h2></a>
             <div class="icons">
-                <a class="icon1" href="about.html"><i class="fab fa-facebook-square"></i></a>
-                <a class="icon2" href="about.html"><i class="fab fa-twitter"></i></a>
-                <a class="icon3" href="about.html"><i class="fab fa-youtube"></i></a>
-                <a class="icon4" href="about.html"><i class="fab fa-instagram"></i></a>
+                <a class="icon1" href="about.php"><i class="fab fa-facebook-square"></i></a>
+                <a class="icon2" href="about.php"><i class="fab fa-twitter"></i></a>
+                <a class="icon3" href="about.php"><i class="fab fa-youtube"></i></a>
+                <a class="icon4" href="about.php"><i class="fab fa-instagram"></i></a>
             </div>
 
         </div>
