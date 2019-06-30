@@ -52,7 +52,7 @@ if(isset($_POST['login'])){
             <li><a href="../login.php">Login</a></li>
             <li><a href="../register.php">Register</a></li>
             <li><a href="../forget-password.php">Forget-Password</a></li>
-            <li><div class="search_bar"><input type="text" name="search" placeholder="Search.."></div></li>
+            <li><div class="search_bar"><input class="search_b" type="text" name="search" placeholder="Search.."></div></li>
         </ul>
     </nav>
 </header>
