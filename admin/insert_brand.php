@@ -57,7 +57,7 @@ if(isset($_POST['insert_brand']))
                     <div class="col col-8">
                         <div>
                             <input type="text" class="form-control" id="brand_title" name="brand_title"
-                                   placeholder="Enter Brand Title" required pattern="([A-Z]|[a-z]){2,}">
+                                   placeholder="Enter Brand Title" required pattern="([A-Z]|[a-z]|\s){2,}">
                         </div>
                     </div>
 

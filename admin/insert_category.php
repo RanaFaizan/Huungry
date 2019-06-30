@@ -57,7 +57,7 @@ if(isset($_POST['insert_cat']))
                     <div class="col col-8">
                         <div>
                             <input type="text" class="form-control" id="cat_title" name="cat_title"
-                                   placeholder="Enter Category Title" required pattern="([A-Z]|[a-z]){2,}">
+                                   placeholder="Enter Category Title" required pattern="([A-Z]|[a-z]|\s){2,}">
                         </div>
                     </div>
 

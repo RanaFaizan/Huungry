@@ -62,7 +62,7 @@ if(isset($_POST['insert_pro']))
                     <div class="col col-4">
                         <div>
                             <input type="text" class="form-control" id="pro_title" name="pro_title"
-                                   placeholder="Enter Product Title" required pattern="([A-Z]|[a-z]){2,}">
+                                   placeholder="Enter Product Title" required pattern="([A-Z]|[a-z]|\s){2,}">
                         </div>
                     </div>
 
@@ -100,7 +100,7 @@ if(isset($_POST['insert_pro']))
                             <select class="form-control" id="pro_brand" name="pro_brand">
                                 <option>Select Brand</option>
                                 <?php
-                                $catQuery = "select * from brand";
+                                $catQuery = "select * from brands";
                                 $catQueryResult = mysqli_query($con,$catQuery);
 
                                 while($row = mysqli_fetch_assoc($catQueryResult))
