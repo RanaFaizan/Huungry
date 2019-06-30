@@ -4,16 +4,8 @@ if(!$con)
 {
     echo "Not Connected";
 }
-if(isset($_POST['insert_cat']))
-{
-    $title =  $_POST['cat_title'];
-    print_r($_POST);
-
-    $q = "insert into categories (cat_title)
-            values('$title')";
-    mysqli_query($con,$q);
-}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,34 +33,40 @@ if(isset($_POST['insert_cat']))
 <main class="homeindex">
     <div class="fullcontainer">
         <div class="container col-10" style="margin-top: 25%;">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="/action_page.php">
 
                 <div class="row">
                     <div class="col-12">
-                        <h1>Add New Categories</h1>
+                        <h1>Our Brandss</h1>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" style="font-size: larger; margin-bottom: 5%">
 
-                    <div class="col col-4">
-                        <label for="cat_title"><span>Title:</span></label>
-                    </div>
-                    <div class="col col-8">
-                        <div>
-                            <input type="text" class="form-control" id="cat_title" name="cat_title"
-                                   placeholder="Enter Category Title" required pattern="([A-Z]|[a-z]|\s){2,}">
-                        </div>
-                    </div>
+                    <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>ID</b></span></label></div>
+                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>TITLE</b></span></label></div>
 
-
-                <div class="row">
-                    <div class="col col-12">
-                        <button type="submit" name="insert_cat" class="submitBTTN"><i class="fas fa-plus"></i>
-                            Insert Now
-                        </button>
-                    </div>
                 </div>
+
+
+                <?php
+                $catQuery = "select * from brands";
+                $catQueryResult = mysqli_query($con,$catQuery);
+
+                while($row = mysqli_fetch_assoc($catQueryResult))
+                {
+                    $brand_id = $row['brand_id'];
+                    $brand_title = $row['brand_title'];
+                    echo "<div class=\"row\">
+                            <div class=\"col col-1\"><label for=\"fname\"><span>$brand_id</span></label></div>
+                            <div class=\"col col-2\"><label for=\"fname\"><span>$brand_title</span></label></div>
+                        </div>";
+                }
+                ?>
+
+
+
+
 
             </form>
         </div>
@@ -77,14 +75,6 @@ if(isset($_POST['insert_cat']))
 
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-
-    });
-</script>
 
 </body>
 </html>

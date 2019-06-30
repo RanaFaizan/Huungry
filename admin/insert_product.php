@@ -45,7 +45,7 @@ if(isset($_POST['insert_pro']))
 <!--<hr>-->
 <main class="homeindex">
     <div class="fullcontainer">
-        <div class="container col-10">
+        <div class="container col-10" style="margin-top: 25%;">
             <form action="" method="post" enctype="multipart/form-data">
 
                 <div class="row">
