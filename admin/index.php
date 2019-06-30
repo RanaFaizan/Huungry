@@ -99,6 +99,15 @@ require_once "db_connection.php";
                     </div>
                 </div>
             </li>
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="logout.php">
+                            <i class="fa fa-sign-out-alt"></i> Admin logout</a>
+                    </button>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
