@@ -20,6 +20,34 @@ if(isset($_POST['insert_pro']))
 }
 ?>
 
+<?php
+if(isset($_FILES['pro_img'])){
+    $errors= array();
+    $file_name = $_FILES['pro_img']['name'];
+    $file_size =$_FILES['pro_img']['size'];
+    $file_tmp =$_FILES['pro_img']['tmp_name'];
+    $file_type=$_FILES['pro_img']['type'];
+    $file_ext=strtolower(end(explode('.',$_FILES['pro_img']['name'])));
+
+    $extensions= array("jpeg","jpg","png");
+
+    if(in_array($file_ext,$extensions)=== false){
+        $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+    }
+
+    if($file_size > 31457280){
+        $errors[]='File size must be excately 2 MB';
+    }
+
+    if(empty($errors)==true){
+        move_uploaded_file($file_tmp,"images/".$file_name);
+        echo "Success";
+    }else{
+        print_r($errors);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,7 +144,7 @@ if(isset($_POST['insert_pro']))
                     </div>
                     <div class="col col-4">
                         <div>
-                            <input class="form-control" type="file" id="pro_image" name="pro_image">
+                            <input class="form-control" type="file" id="pro_img" name="pro_img">
                         </div>
                     </div>
                 </div>

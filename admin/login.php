@@ -43,7 +43,7 @@ if(isset($_POST['login'])){
 <header>
     <nav>
         <div>
-            <a href="index.php"><img src="../images/logo1.png" alt="Home"></a>
+            <a href="../index.php"><img src="../images/logo1.png" alt="Home"></a>
         </div>
 
         <ul>
@@ -126,7 +126,7 @@ if(isset($_POST['login'])){
         <div class="hide col-3 column">
 
             <ul>
-                <a href="index.php"><img class="logo" src="../images/logo.png" alt="Home"></a>
+                <a href="../index.php"><img class="logo" src="../images/logo.png" alt="Home"></a>
             </ul>
 
         </div>

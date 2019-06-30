@@ -34,51 +34,7 @@
 </header>
 <!--<hr>-->
 <main class="homeindex">
-    <div class="row">
-        <div class="col col-12">
-            <img class="mySlides" src="images/slider1.jpg">
-            <img class="mySlides" src="images/slider2.jpg">
-            <img class="mySlides" src="images/slider3.jpg">
-            <img class="mySlides" src="images/slider4.jpg">
-        </div>
-    </div>
 
-    <div class="row">
-
-        <div class="col col-6 aside" style="margin-top: -30%;margin-bottom: 5%;">
-                <h2>​What makes us different?</h2>
-                <p>//////////////////////////////////////</p>
-        </div>
-
-        <div class="col col-6 aside" style="margin-top: -30%;margin-bottom: 5%;">
-                <h2>Where?</h2>
-                <p>//////////////////////////////////////</p>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col col-12 aside"">
-        <h2>​What makes us different?</h2>
-        <p>//////////////////////////////////////</p>
-    </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col col-6 aside"">
-            <h2>​What makes us different?</h2>
-            <p>//////////////////////////////////////</p>
-        </div>
-
-        <div class="col col-6 aside">
-            <h2>Where?</h2>
-            <p>//////////////////////////////////////</p>
-        </div>
-
-    </div>
 </main>
 <!--<hr>-->
 <footer>
