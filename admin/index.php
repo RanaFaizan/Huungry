@@ -168,7 +168,7 @@ require_once "db_connection.php";
         </div>
 
         <div class="col-3 column">
-            <a href="about.php"><h2>About Us</h2></a>
+            <a href="../about.php"><h2>About Us</h2></a>
             <div>
                 <address>
                     Developed By<br>
@@ -181,7 +181,7 @@ require_once "db_connection.php";
 
         <div class="col-3 column">
 
-            <a  href="contact.php"><h2>Contact Us</h2></a>
+            <a  href="../contact.php"><h2>Contact Us</h2></a>
             <div>
                 <address>
                     Email: faizi_733@ucp.edu.pk<br>
@@ -193,12 +193,12 @@ require_once "db_connection.php";
 
         <div class="col-3 column">
 
-            <a href="about.php"><h2>Stay Connected</h2></a>
+            <a href="../about.php"><h2>Stay Connected</h2></a>
             <div class="icons">
-                <a class="icon1" href="about.php"><i class="fab fa-facebook-square"></i></a>
-                <a class="icon2" href="about.php"><i class="fab fa-twitter"></i></a>
-                <a class="icon3" href="about.php"><i class="fab fa-youtube"></i></a>
-                <a class="icon4" href="about.php"><i class="fab fa-instagram"></i></a>
+                <a class="icon1" href="../about.php"><i class="fab fa-facebook-square"></i></a>
+                <a class="icon2" href="../about.php"><i class="fab fa-twitter"></i></a>
+                <a class="icon3" href="../about.php"><i class="fab fa-youtube"></i></a>
+                <a class="icon4" href="../about.php"><i class="fab fa-instagram"></i></a>
             </div>
 
         </div>
