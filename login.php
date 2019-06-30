@@ -35,13 +35,14 @@
 </header>
 <!--<hr>-->
 <main class="cform">
+
     <div class="fullcontainer">
         <div class="container col-10">
             <form action="/action_page.php">
 
                 <div class="row">
                     <div class="col-12">
-                        <h1>Login</h1>
+                        <h1>User Login</h1>
                     </div>
                 </div>
 
@@ -62,6 +63,12 @@
 
                     <div class="col col-2">
                         <input class="submitBTTN" type="button" value="Forgot Password" onclick="window.location.href='forget-password.html'">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-12" style="padding-top: 3%;">
+                        <input style="width: 100%; font-size: large;" type="submit" value="Go to Admin Login" onclick="window.location.href='admin/login.php'">
                     </div>
                 </div>
 

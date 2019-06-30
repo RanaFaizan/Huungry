@@ -107,6 +107,13 @@ if(isset($_POST['login'])){
                 </div>
             </div>
 
+
+            <div class="row">
+                <div class="col col-12" style="padding-top: 3%;">
+                    <input style="width: 100%; font-size: large;" type="submit" value="Go to User Login" onclick="window.location.href='../login.php'">
+                </div>
+            </div>
+
             </form>
         </div>
     </div>
