@@ -46,7 +46,7 @@ if(isset($_POST['insert_pro']))
 <main class="homeindex">
     <div class="fullcontainer">
         <div class="container col-10">
-            <form action="/action_page.php">
+            <form action="" method="post" enctype="multipart/form-data">
 
                 <div class="row">
                     <div class="col-12">
