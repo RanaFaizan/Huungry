@@ -9,6 +9,9 @@
     <meta name="author" content="Rana Faizan Ur Rahman Khan, Hamza Rehman">
 
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\form.css">
+    <link rel="stylesheet" href="css\coloumns.css">
+    <link rel="stylesheet" href="css\responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -17,15 +20,15 @@
 <header>
     <nav>
         <div>
-            <a href="index.php"><img src="images/logo1.png" alt="Home"></a>
+            <a href="index.html"><img src="images/logo1.png" alt="Home"></a>
         </div>
 
         <ul>
-            <li><a href="about.php">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="register.php">Register</a></li>
-            <li><a href="forget-password.php">Forget-Password</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="forget-password.html">Forget-Password</a></li>
             <li><div class="search_bar"><input class="search_b" type="text" name="search" placeholder="Search.."></div></li>
         </ul>
     </nav>
@@ -111,13 +114,13 @@
         <div class="hide col-3 column">
 
             <ul>
-                <a href="index.php"><img class="logo" src="images/logo.png" alt="Home"></a>
+                <a href="index.html"><img class="logo" src="images/logo.png" alt="Home"></a>
             </ul>
 
         </div>
 
         <div class="col-3 column">
-            <a href="about.php"><h2>About Us</h2></a>
+            <a href="about.html"><h2>About Us</h2></a>
             <div>
                 <address>
                     Developed By<br>
@@ -130,7 +133,7 @@
 
         <div class="col-3 column">
 
-            <a  href="contact.php"><h2>Contact Us</h2></a>
+            <a  href="contact.html"><h2>Contact Us</h2></a>
             <div>
             <address>
                 Email: faizi_733@ucp.edu.pk<br>
@@ -142,12 +145,12 @@
 
         <div class="col-3 column">
 
-            <a href="about.php"><h2>Stay Connected</h2></a>
+            <a href="about.html"><h2>Stay Connected</h2></a>
             <div class="icons">
-                <a class="icon1" href="about.php"><i class="fab fa-facebook-square"></i></a>
-                <a class="icon2" href="about.php"><i class="fab fa-twitter"></i></a>
-                <a class="icon3" href="about.php"><i class="fab fa-youtube"></i></a>
-                <a class="icon4" href="about.php"><i class="fab fa-instagram"></i></a>
+                <a class="icon1" href="about.html"><i class="fab fa-facebook-square"></i></a>
+                <a class="icon2" href="about.html"><i class="fab fa-twitter"></i></a>
+                <a class="icon3" href="about.html"><i class="fab fa-youtube"></i></a>
+                <a class="icon4" href="about.html"><i class="fab fa-instagram"></i></a>
             </div>
 
         </div>
