@@ -33,7 +33,7 @@ if(!$con)
 <main class="homeindex">
     <div class="fullcontainer">
         <div class="container col-10" style="margin-top: 25%;">
-            <form action="/action_page.php">
+            <form  action="" method="post" enctype="multipart/form-data">
 
                 <div class="row">
                     <div class="col-12">
@@ -57,6 +57,8 @@ if(!$con)
                     <?php
                     $catQuery = "select * from products";
                     $catQueryResult = mysqli_query($con,$catQuery);
+                    $count = 0;
+                    $click_key = 0;
 
                     while($row = mysqli_fetch_assoc($catQueryResult))
                     {
@@ -76,6 +78,37 @@ if(!$con)
                             <div class=\"col col-2\"><label for=\"fname\"><span>$pro_desc</span></label></div>
                             <div class=\"col col-2\"><label for=\"fname\"><span>$pro_keywords</span></label></div>
                         </div>";
+
+                        echo "<div class=\"row\">
+                                    <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
+                                        <button style=' background-color: #b21f2d'  type=\"submit\" name=$count>
+                                    
+                                            <i class=\"fa fa-sign-out-alt\"></i>Delete</a>
+                                        </button>
+                                     </div>
+                                     
+                                     <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%'>
+                                        <button>
+                                            <a href=\"logout.php\">
+                                            <i class=\"fa fa-sign-out-alt\"></i>Edit</a>
+                                        </button>
+                                     </div>
+                             </div>";
+
+                        $data[$count] = $pro_id;
+                        $count = $count + 1;
+                    }
+                    $i = 0;
+                    while($i < $count)
+                    {
+                        if(isset($_POST[$i]) == 1){
+                            $del_id = $data[$i];
+                            $del_pro = "delete from products where pro_id='$del_id'";
+                            $run_del = mysqli_query($con,$del_pro);
+                            
+                            break;
+                        }
+                        $i = $i + 1;
                     }
                     ?>
 
