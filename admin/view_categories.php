@@ -64,13 +64,13 @@ if(!$con)
 
                     echo "<div class=\"row\">
                                     <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
-                                        <a href=\"index.php?del_pro=$cat_id\" class=\"btn btn-danger\" style=' width: 100%;background-color: darkred;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;' '>
+                                        <a href=\"index.php?del_cat=$cat_id\" class=\"btn btn-danger\" style=' width: 100%;background-color: darkred;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;' '>
                                         <i class=\"fa fa-trash-alt\"></i> Delete
                                         </a>
                                      </div>
                                      
                                      <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
-                                        <a href=\"index.php?edit_pro = $cat_id\" class=\"btn btn-danger\"style=' width: 100%;background-color: #45a049;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;'>
+                                        <a href=\"index.php?edit_cat = $cat_id\" class=\"btn btn-danger\"style=' width: 100%;background-color: #45a049;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;'>
                                         <i class=\"fas fa-edit\"></i> Edit
                                         </a>
                                      </div>
