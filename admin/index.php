@@ -126,6 +126,9 @@ require_once "db_connection.php";
             else if(isset($_GET['edit_pro'])){
                 include ('edit_pro.php');
             }
+            else if(isset($_GET['edit_pro_page'])){
+                include ('edit_pro_page.php');
+            }
             else if(isset($_GET['del_pro'])){
                 include ('del_pro.php');
             }
@@ -137,6 +140,9 @@ require_once "db_connection.php";
             }
             else if(isset($_GET['edit_cat'])){
                 include ('edit_cat.php');
+            }
+            else if(isset($_GET['edit_cat_page'])){
+                include ('edit_cat_page.php');
             }
             else if(isset($_GET['del_cat'])){
                 include ('del_cat.php');
@@ -150,14 +156,17 @@ require_once "db_connection.php";
             else if(isset($_GET['edit_brand'])) {
                 include('edit_brand.php');
             }
+            else if(isset($_GET['edit_brand_page'])) {
+                include('edit_brand_page.php');
+            }
             else if(isset($_GET['del_brand'])) {
                 include('del_brand.php');
             }
             else if(isset($_GET['view_customers'])){
                 include ('view_customers.php');
             }
-            else if(isset($_GET['del_customer'])){
-                include ('del_customer.php');
+            else if(isset($_GET['del_cus'])){
+                include ('del_cus.php');
             }
             ?>
         </div>

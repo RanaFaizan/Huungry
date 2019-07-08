@@ -84,7 +84,7 @@ if(!$con)
                                      </div>
                                      
                                      <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
-                                        <a href=\"index.php?edit_pro = $pro_id\" class=\"btn btn-danger\"style=' width: 100%;background-color: #45a049;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;'>
+                                        <a href=\"index.php?edit_pro_page=$pro_id\" class=\"btn btn-danger\"style=' width: 100%;background-color: #45a049;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;'>
                                         <i class=\"fas fa-edit\"></i> Edit
                                         </a>
                                      </div>
