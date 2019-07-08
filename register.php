@@ -1,3 +1,27 @@
+<?php
+$con = mysqli_connect("localhost","root","","huungry");
+if(!$con)
+{
+    echo "Not Connected";
+}
+if(isset($_POST['cus_register']))
+{
+    $fname =  $_POST['fname'];
+    $lname =  $_POST['lname'];
+    $email =  $_POST['email'];
+    $phone =  $_POST['phone'];
+    $gender =  $_POST['gender'];
+    $dob =  $_POST['dob'];
+    $city =  $_POST['city'];
+    $cus_pass =  $_POST['cus_pass'];
+    print_r($_POST);
+
+    $q = "insert into customers (first_name,last_name,email,phone,gender,dob,city,cus_pass)
+            values('$fname','$lname','$email','$phone','$gender','$dob','$city','$cus_pass')";
+    mysqli_query($con,$q);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +33,6 @@
     <meta name="author" content="Rana Faizan Ur Rahman Khan, Hamza Rehman">
 
     <link rel="stylesheet" href="css\style.css">
-    <link rel="stylesheet" href="css\form.css">
-    <link rel="stylesheet" href="css\coloumns.css">
-    <link rel="stylesheet" href="css\responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -37,7 +58,7 @@
 <main class="rform">
     <div class="fullcontainer">
         <div class="container col-10">
-            <form action="/action_page.php">
+            <form action="" method="post" enctype="multipart/form-data">
 
                 <div class="row">
                     <div class="col-12">
@@ -48,10 +69,10 @@
                 <div class="row">
 
                     <div class="col col-2"><label for="fname"><span>First Name</span></label></div>
-                    <div class="col col-4"><input type="text" id="fname" name="firstname" placeholder="Your name.." required pattern="([A-Z]|[a-z]){2,}"></div>
+                    <div class="col col-4"><input type="text" id="fname" name="fname" placeholder="Your name.." required pattern="([A-Z]|[a-z]){2,}"></div>
 
                     <div class="col col-2"><label for="lname"><span>Last Name</span></label></div>
-                    <div class="col col-4"><input type="text" id="lname" name="lastname" placeholder="Your last name.." required pattern="([A-Z]|[a-z]){2,}"></div>
+                    <div class="col col-4"><input type="text" id="lname" name="lname" placeholder="Your last name.." required pattern="([A-Z]|[a-z]){2,}"></div>
 
                 </div>
 
@@ -61,7 +82,7 @@
                     <div class="col col-4"><input type="text" id="email" name="email" placeholder="Your email address.." required pattern="[a-z]+(\w|\.|)?(([a-z]|[0-9])*)?@(([a-z]{3,7}\.com)|([a-z]{3,5}\.[^com]{3,5}\.pk))"></div>
 
                     <div class="col col-2"><label for="pnum"><span>Phone Number</span></label></div>
-                    <div class="col col-4"><input type="text" id="pnum" name="phone" placeholder="Your phone number.." required pattern="(((03)[0-4][0-9]\d[0-9]{6})|((03)[0-4][0-9]-[0-9]{7})|(\+(923)[0-4][0-9]\d[0-9]{6})|(\+(923)[0-4][0-9]-[0-9]{7}))"></div>
+                    <div class="col col-4"><input type="text" id="phone" name="phone" placeholder="Your phone number.." required pattern="(((03)[0-4][0-9]\d[0-9]{6})|((03)[0-4][0-9]-[0-9]{7})|(\+(923)[0-4][0-9]\d[0-9]{6})|(\+(923)[0-4][0-9]-[0-9]{7}))"></div>
 
                 </div>
 
@@ -70,15 +91,15 @@
                     <div class="col col-2"><label for="gender"><span>Gender</span></label></div>
 
                     <div  class="col col-4">
-                        <select id="gender" class="selection" name="city">
-                            <option value="lahore">Male</option>
-                            <option value="lahore">Female</option>
-                            <option value="lahore">Un-specified</option>
+                        <select id="gender" class="selection" name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Femal">Female</option>
+                            <option value="Un-specified">Un-specified</option>
                         </select>
                     </div>
 
                     <div class="col col-2"><label for="birth"><span>Date of Birth</span></label></div>
-                    <div class="col col-4"><input type="date" id="birth" name="birth"></div>
+                    <div class="col col-4"><input type="date" id="dob" name="dob"></div>
 
                 </div>
 
@@ -88,11 +109,11 @@
 
                     <div  class="col col-10">
                         <select id="city" class="selection" name="city">
-                            <option value="lahore">Lahore</option>
-                            <option value="lahore">Karachi</option>
-                            <option value="lahore">Peshawar</option>
-                            <option value="lahore">Queta</option>
-                            <option value="lahore">Islamabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Queta">Queta</option>
+                            <option value="Islamabad">Islamabad</option>
                         </select>
                     </div>
 
@@ -100,8 +121,8 @@
 
                 <div class="row">
 
-                    <div class="col col-2"><label for="pass"><span>Password</span></label></div>
-                    <div class="col col-4"><input type="password" id="pass" name="email" placeholder="Your password.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
+                    <div class="col col-2"><label for="cus_pass"><span>Password</span></label></div>
+                    <div class="col col-4"><input type="password" id="cus_pass" name="cus_pass" placeholder="Your password.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
 
                     <div class="col col-2"><label for="cpass"><span>Confirm</span></label></div>
                     <div class="col col-4"><input type="password" id="cpass" name="cpass" placeholder="Confirm password.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
@@ -110,11 +131,11 @@
 
                 <div class="row">
                     <div class="col col-2">
-                        <input class="submitBTTN" type="submit" value="Sign Up">
+                        <input class="submitBTTN" type="submit" name="cus_register" value="Sign Up">
                     </div>
 
                     <div class="col col-2">
-                        <input class="submitBTTN" type="button" value="Login" onclick="window.location.href='login.html'">
+                        <input class="submitBTTN" type="button" value="Login" onclick="window.location.href='login.php'">
                     </div>
                 </div>
 
