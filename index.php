@@ -34,7 +34,32 @@
 </header>
 <!--<hr>-->
 <main class="homeindex">
+    <div class="row">
+        <div class="col col-12">
+            <img class="mySlides" src="images/slider1.jpg">
+            <img class="mySlides" src="images/slider2.jpg">
+            <img class="mySlides" src="images/slider3.jpg">
+            <img class="mySlides" src="images/slider4.jpg">
+        </div>
+    </div>
 
+    <div class="row">
+
+
+
+    </div>
+
+    <div class="row">
+
+
+
+    </div>
+
+    <div class="row">
+
+
+
+    </div>
 </main>
 <!--<hr>-->
 <footer>

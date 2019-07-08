@@ -9,6 +9,9 @@
     <meta name="author" content="Rana Faizan Ur Rahman Khan, Hamza Rehman">
 
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\form.css">
+    <link rel="stylesheet" href="css\coloumns.css">
+    <link rel="stylesheet" href="css\responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">

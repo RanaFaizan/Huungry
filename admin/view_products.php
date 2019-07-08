@@ -78,16 +78,15 @@ if(!$con)
 
                         echo "<div class=\"row\">
                                     <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
-                                        <a href=\"index.php?del_pro=$pro_id\" class=\"btn btn-danger\">
+                                        <a href=\"index.php?del_pro=$pro_id\" class=\"btn btn-danger\" style=' width: 100%;background-color: darkred;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;' '>
                                         <i class=\"fa fa-trash-alt\"></i> Delete
                                         </a>
                                      </div>
                                      
-                                     <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%'>
-                                        <button>
-                                            <a href=\"logout.php\">
-                                            <i class=\"fa fa-sign-out-alt\"></i>Edit</a>
-                                        </button>
+                                     <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
+                                        <a href=\"index.php?edit_pro = $pro_id\" class=\"btn btn-danger\"style=' width: 100%;background-color: #45a049;color: white;padding: 12px 20px;border: none;border-radius: 10px;cursor: pointer;'>
+                                        <i class=\"fas fa-edit\"></i> Edit
+                                        </a>
                                      </div>
                              </div>";
                     }

@@ -58,6 +58,10 @@ body,html{
     background-color: red;
 }
 
+.btn-dell{
+    background-color: red;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;

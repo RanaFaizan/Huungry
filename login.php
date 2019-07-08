@@ -24,6 +24,8 @@ if(isset($_POST['login'])){
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,11 +62,13 @@ if(isset($_POST['login'])){
 <main class="cform">
     <div class="fullcontainer">
         <div class="container col-10">
-            <form action="login.php" method="post"">
+            <form action="" method="post">
 
-            <div class="row">
-                <div class="col-12">
-                    <h1>User Login</h1>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>User Login</h1>
+                    </div>
+
                     <div class="col col-12" style="padding-left: 35%;padding-bottom: 1%; color: #b21f2d">
                         <b>
                             <h3>
@@ -72,47 +76,47 @@ if(isset($_POST['login'])){
                             </h3>
                         </b>
                     </div>
-                </div>
-            </div>
 
-            <div class="col col-12" style="padding-left: 35%;padding-bottom: 1%; color: #b21f2d">
-                <b>
-                    <h3 class="text-danger"><?php echo @$_GET['not_admin']?></h3>
-                    <h3 class="text-primary"><?php echo @$_GET['logged_out']?></h3>
-                </b>
-            </div>
-
-            <div class="row">
-
-                <div class="col col-3"><label for="email"><span>Email</span></label></div>
-                <div class="col col-7"><input type="text" id="user_email" name="user_email" value="<?php echo @$_COOKIE['user_email']?>" placeholder="Your email address.." required pattern="[a-z]+(\w|\.|)?(([a-z]|[0-9])*)?@(([a-z]{3,7}\.com)|([a-z]{3,5}\.[^com]{3,5}\.pk))"></div>
-
-                <div class="col col-3"><label for="pass"><span>Password</span></label></div>
-                <div class="col col-7"><input type="password" id="user_pass" name="user_pass" value="<?php echo @$_COOKIE['user_pass']?>" placeholder="Your passwordr.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
-
-            </div>
-
-            <div class="col col-12" style="padding-left: 34%;padding-bottom: 2%">
-                <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                <label class="form-check-label" for="remember" style="color: #721c24"><b>Remember me</b></label>
-            </div>
-
-            <div class="row">
-                <div class="col col-2">
-                    <input class="submitBTTN" type="submit" name="login" value="Sign In">
+                    <div class="col col-12" style="padding-left: 35%;padding-bottom: 1%; color: #b21f2d">
+                        <b>
+                            <h3 class="text-danger"><?php echo @$_GET['not_admin']?></h3>
+                            <h3 class="text-primary"><?php echo @$_GET['logged_out']?></h3>
+                        </b>
+                    </div>
                 </div>
 
-                <div class="col col-2">
-                    <input class="submitBTTN" type="button" value="Forgot Password" onclick="window.location.href='forget-password.html'">
-                </div>
-            </div>
+                <div class="row">
 
+                    <div class="col col-3"><label for="email"><span>Email</span></label></div>
+                    <div class="col col-7"><input type="text" id="user_email" name="user_email" placeholder="Your email address.." required pattern="[a-z]+(\w|\.|)?(([a-z]|[0-9])*)?@(([a-z]{3,7}\.com)|([a-z]{3,5}\.[^com]{3,5}\.pk))"></div>
 
-            <div class="row">
-                <div class="col col-12" style="padding-top: 3%;">
-                    <input style="width: 100%; font-size: large;" type="submit" value="Go to Admin Login" onclick="window.location.href='admin/login.php'">
+                    <div class="col col-3"><label for="pass"><span>Password</span></label></div>
+                    <div class="col col-7"><input type="password" id="user_pass" name="user_pass" placeholder="Your passwordr.." required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$"></div>
+
                 </div>
-            </div>
+
+                <div class="row">
+                    <div class="col col-12" style="padding-left: 34%;padding-bottom: 2%">
+                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                        <label class="form-check-label" for="remember" style="color: #721c24"><b>Remember me</b></label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-2">
+                        <input class="submitBTTN" type="submit" name="login" value="Login">
+                    </div>
+
+                    <div class="col col-2">
+                        <input class="submitBTTN" type="button" value="Forgot Password" onclick="window.location.href='forget-password.html'">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-12" style="padding-top: 3%;">
+                        <input style="width: 100%; font-size: large;" type="submit" value="Go to Admin Login" onclick="window.location.href='admin/login.php'">
+                    </div>
+                </div>
 
             </form>
         </div>
@@ -170,7 +174,5 @@ if(isset($_POST['login'])){
     </div>
 
 </footer>
-<script src="../js/jquery-3.3.1.js"></script>
-<script src="../js/bootstrap.bundle.js"></script>
 </body>
 </html>
