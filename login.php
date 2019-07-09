@@ -108,7 +108,7 @@ if(isset($_POST['login'])){
                     </div>
 
                     <div class="col col-2">
-                        <input class="submitBTTN" type="button" value="Forgot Password" onclick="window.location.href='forget-password.html'">
+                        <input class="submitBTTN" type="button" value="Forgot Password" onclick="window.location.href='forget-password.php'">
                     </div>
                 </div>
 
