@@ -71,6 +71,7 @@ if(!$con)
                     $dob = $row['dob'];
                     $city = $row['city'];
                     $cus_pass = $row['cus_pass'];
+                    $cus_img = $row['cus_img'];
                     echo "<div class=\"row\">
                             <div class=\"col col-1\"><label for=\"fname\"><span><b>$cus_id</b></span></label></div>
                             <div class=\"col col-1\"><label for=\"fname\"><span><b>$first_name</b></span></label></div>
@@ -82,6 +83,10 @@ if(!$con)
                             <div class=\"col col-1\"><label for=\"fname\"><span><b>$city</b></span></label></div>
                             <div class=\"col col-1\"><label for=\"fname\"><span><b>$cus_pass</b></span></label></div>
                         </div>";
+
+                    echo "<div class=\"row\">
+                                     <div class=\"col col - 12\"><label for=\"fname\"><img src='product_images/$cus_img' width='80' height='80'></label></div>
+                             </div>";
 
                     echo "<div class=\"row\">
                                     <div class=\"col col-4\" style='margin-bottom: 2%; margin-top: 2%;'>
