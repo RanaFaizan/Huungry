@@ -37,7 +37,7 @@ if(!$con)
 
                 <div class="row">
                     <div class="col-12">
-                        <h1>Our Brandss</h1>
+                        <h1>Our Brands</h1>
                     </div>
                 </div>
 
