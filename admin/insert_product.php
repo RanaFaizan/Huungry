@@ -6,6 +6,7 @@ if(!$con)
 }
 if(isset($_POST['insert_pro']))
 {
+    $file = addslashes(file_get_contents($_FILES["pro_img"]["tmp_name"]));
     $title =  $_POST['pro_title'];
     $cat =  $_POST['pro_cat'];
     $brand =  $_POST['pro_brand'];
@@ -14,39 +15,12 @@ if(isset($_POST['insert_pro']))
     $keywords =  $_POST['pro_keywords'];
     print_r($_POST);
 
-    $q = "insert into products (pro_title,pro_cat,pro_brand,pro_price,pro_desc,pro_keywords)
-            values('$title','$cat','$brand','$price','$desc','$keywords')";
-    mysqli_query($con,$q);
+    $q = "insert into products (pro_title,pro_cat,pro_brand,pro_price,pro_desc,pro_img,pro_keywords)
+            values('$title','$cat','$brand','$price','$desc','$file','$keywords')";
 }
 ?>
 
-<?php
-if(isset($_FILES['pro_img'])){
-    $errors= array();
-    $file_name = $_FILES['pro_img']['name'];
-    $file_size =$_FILES['pro_img']['size'];
-    $file_tmp =$_FILES['pro_img']['tmp_name'];
-    $file_type=$_FILES['pro_img']['type'];
-    $file_ext=strtolower(end(explode('.',$_FILES['pro_img']['name'])));
 
-    $extensions= array("jpeg","jpg","png");
-
-    if(in_array($file_ext,$extensions)=== false){
-        $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-    }
-
-    if($file_size > 31457280){
-        $errors[]='File size must be excately 2 MB';
-    }
-
-    if(empty($errors)==true){
-        move_uploaded_file($file_tmp,"images/".$file_name);
-        echo "Success";
-    }else{
-        print_r($errors);
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -197,11 +171,25 @@ if(isset($_FILES['pro_img'])){
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
 <script>
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
+    $(document).ready(function(){
+        $('#insert_pro').click(function(){
+            var image_name = $('#pro_img').val();
+            if(image_name == '')
+            {
+                alert("Please Select an Image");
+                return false;
+            }
+            else
+            {
+                var extension = $('#pro_img').val().split('.').pop().toLowerCase();
+                if(jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg'] == -1))
+                {
+                    alert('Invalid File Image');
+                    $('#pro_img').val('');
+                    return false;
+                }
+            }
         });
-
     });
 </script>
 
