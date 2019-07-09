@@ -39,13 +39,10 @@ require_once "db_connection.php";
 
             <div class="row" style="font-size: larger; margin-bottom: 5%">
 
-                <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>ID</b></span></label></div>
+                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>IMAGE</b></span></label></div>
                 <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>TITLE</b></span></label></div>
-                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>BRAND</b></span></label></div>
-                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>CATEGORY</b></span></label></div>
-                <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>PRICE</b></span></label></div>
-                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>DESC</b></span></label></div>
-                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>KEYWORDS</b></span></label></div>
+                <div class="col col-3"><label for="fname"><span style="color: #721c24"><b>BRAND</b></span></label></div>
+                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>PRICE</b></span></label></div>
 
             </div>
 
@@ -56,21 +53,16 @@ require_once "db_connection.php";
 
             while($row = mysqli_fetch_assoc($catQueryResult))
             {
-                $pro_id = $row['pro_id'];
                 $pro_title = $row['pro_title'];
                 $pro_brand = $row['pro_brand'];
-                $pro_cat = $row['pro_cat'];
                 $pro_price = $row['pro_price'];
-                $pro_desc = $row['pro_desc'];
-                $pro_keywords = $row['pro_keywords'];
+                $pro_img = $row['pro_img'];
                 echo "<div class=\"row\">
-                            <div class=\"col col-1\"><label for=\"fname\"><span>$pro_id</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_title</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_brand</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_cat</span></label></div>
-                            <div class=\"col col-1\"><label for=\"fname\"><span>$pro_price</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_desc</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_keywords</span></label></div>
+                            
+                            <div class=\"col col - 3\"><label for=\"fname\"><img src='admin/product_images/$pro_img' width='80' height='80'></label></div>
+                            <div class=\"col col-3\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_title</span></label></div>
+                            <div class=\"col col-3\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_brand</span></label></div>
+                            <div class=\"col col-2\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_price</span></label></div>
                         </div>";
             }
             ?>

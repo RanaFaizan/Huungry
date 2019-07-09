@@ -47,8 +47,8 @@ if(!$con)
                     <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>BRAND</b></span></label></div>
                     <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>CATEGORY</b></span></label></div>
                     <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>PRICE</b></span></label></div>
-                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>DESC</b></span></label></div>
-                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>KEYWORDS</b></span></label></div>
+<!--                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>DESC</b></span></label></div>-->
+<!--                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>KEYWORDS</b></span></label></div>-->
 
                 </div>
 
@@ -66,14 +66,14 @@ if(!$con)
                         $pro_price = $row['pro_price'];
                         $pro_desc = $row['pro_desc'];
                         $pro_keywords = $row['pro_keywords'];
+                        $pro_img = $row['pro_img'];
                         echo "<div class=\"row\">
-                            <div class=\"col col-1\"><label for=\"fname\"><span>$pro_id</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_title</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_brand</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_cat</span></label></div>
-                            <div class=\"col col-1\"><label for=\"fname\"><span>$pro_price</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_desc</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$pro_keywords</span></label></div>
+                            <div class=\"col col-1\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_id</span></label></div>
+                            <div class=\"col col-2\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_title</span></label></div>
+                            <div class=\"col col-2\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_brand</span></label></div>
+                            <div class=\"col col-2\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_cat</span></label></div>
+                            <div class=\"col col-1\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_price</span></label></div>
+                            <div class=\"col col-2\"><label for=\"fname\"><img src='product_images/$pro_img' width='80' height='80'></label></div>
                         </div>";
 
                         echo "<div class=\"row\">

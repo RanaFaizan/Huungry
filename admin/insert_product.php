@@ -45,7 +45,7 @@ if(isset($_POST['insert_pro']))
                 "message" => "Image size exceeds 2MB"
             );
         }    // Validate image file dimension
-        else if ($width > "1000" || $height > "800") {
+        else if ($width > "1920" || $height > "1080") {
             $response = array(
                 "type" => "warning",
                 "message" => "Image dimension should be within 1000X800"
