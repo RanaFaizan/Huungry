@@ -56,6 +56,17 @@ $con->close();
                         <input type="hidden" name="brand_id"
                                value="<?php echo $r ["brand_id"]?>">
                     </div>
+                </div>
+                    <div class="row">
+                        <div class="col col-2">
+                            <label for="brand_img" class="float-md-right"><span> Image:</span></label>
+                        </div>
+                        <div class="col col-4">
+                            <div>
+                                <input class="form-control" type="file" id="brand_img" name="brand_img">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row">
                         <div class="col col-12">
