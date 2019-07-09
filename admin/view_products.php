@@ -47,6 +47,7 @@ if(!$con)
                     <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>BRAND</b></span></label></div>
                     <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>CATEGORY</b></span></label></div>
                     <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>PRICE</b></span></label></div>
+                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>IMAGE</b></span></label></div>
 <!--                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>DESC</b></span></label></div>-->
 <!--                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>KEYWORDS</b></span></label></div>-->
 

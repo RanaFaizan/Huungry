@@ -7,14 +7,73 @@ if(!$con)
 if(isset($_POST['insert_brand']))
 {
     $title =  $_POST['brand_title'];
-    print_r($_POST);
 
-    $q = "insert into brands (brand_title)
-            values('$title')";
-    mysqli_query($con,$q);
+    //getting image from the field
+    $pro_image_name = $_FILES['brand_img']['name'];
+    $pro_image_tmp = $_FILES['brand_img']['tmp_name'];
+    $pro_image_size = $_FILES['brand_img']['size'];
+
+    if (file_exists($pro_image_tmp))
+    {
+        $image_info = getimagesize($pro_image_tmp);
+        $width = $image_info[0];
+        $height = $image_info[1];
+        $target_directory = "product_images/";
+        $allowed_image_extension = array("png", "jpg", "jpeg");
+
+        // Get image file extension
+        $image_extension = pathinfo($pro_image_name, PATHINFO_EXTENSION);
+
+        // Validate file input to check if is not empty
+        // Validate file input to check if is with valid extension
+        if (!in_array($image_extension, $allowed_image_extension)) {
+            $response = array(
+                "type" => "warning",
+                "message" => "Upload valid images. Only PNG and JPEG are allowed."
+            );
+            //echo $result;
+        }    // Validate image file size
+        else if ($pro_image_size > 2000000) {
+            $response = array(
+                "type" => "warning",
+                "message" => "Image size exceeds 2MB"
+            );
+        }    // Validate image file dimension
+        else if ($width > "1920" || $height > "1080") {
+            $response = array(
+                "type" => "warning",
+                "message" => "Image dimension should be within 1000X800"
+            );
+        } else {
+            $updated_img_name = "user_" . time() . "_" . $pro_image_name;
+            echo $updated_img_name;
+            $target = $target_directory . $updated_img_name;
+            if (move_uploaded_file($pro_image_tmp, $target)) {
+
+                $q = "insert into brands (brand_title,brand_img)
+                values('$title','$updated_img_name')";
+                $insert_pro = mysqli_query($con, $q);
+                if ($insert_pro) {
+                    //header("location: ".$_SERVER['PHP_SELF']);
+                    $response = array(
+                        "type" => "success",
+                        "message" => "Product uploaded successfully."
+                    );
+                }
+
+
+            } else {
+                $response = array(
+                    "type" => "warning",
+                    "message" => "Problem in uploading image files."
+                );
+            }
+        }
+    }
+
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +120,16 @@ if(isset($_POST['insert_brand']))
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col col-2">
+                            <label for="brand_img" class="float-md-right"><span> Image:</span></label>
+                        </div>
+                        <div class="col col-4">
+                            <div>
+                                <input class="form-control" type="file" id="brand_img" name="brand_img">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row">
                         <div class="col col-12"></div>
@@ -78,14 +147,7 @@ if(isset($_POST['insert_brand']))
 
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
 
-    });
-</script>
 
 </body>
 </html>

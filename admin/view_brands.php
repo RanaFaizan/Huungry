@@ -45,6 +45,7 @@ if(!$con)
 
                     <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>ID</b></span></label></div>
                     <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>TITLE</b></span></label></div>
+                    <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>IMAGE</b></span></label></div>
 
                 </div>
 
@@ -57,9 +58,11 @@ if(!$con)
                 {
                     $brand_id = $row['brand_id'];
                     $brand_title = $row['brand_title'];
+                    $brand_img = $row['brand_img'];
                     echo "<div class=\"row\">
-                            <div class=\"col col-1\"><label for=\"fname\"><span>$brand_id</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$brand_title</span></label></div>
+                            <div class=\"col col-1\"   style='margin-top: 2%;'><label for=\"fname\"><span>$brand_id</span></label></div>
+                            <div class=\"col col-2\"   style='margin-top: 2%;'><label for=\"fname\"><span>$brand_title</span></label></div>
+                            <div class=\"col col-2\"><label for=\"fname\"><img src='product_images/$brand_img' width='80' height='80'></label></div>
                         </div>";
 
                     echo "<div class=\"row\">
