@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['user_email'])){
+    header('location: login.php?not_admin=You are not Admin!');
+}
 require_once "db_connection.php";
 ?>
 
@@ -24,27 +27,38 @@ require_once "db_connection.php";
 <header>
     <nav>
         <div>
-            <a href="index.php"><img src="images/logo1.png" alt="Home"></a>
+            <a href="index2.php"><img src="images/logo1.png" alt="Home"></a>
         </div>
 
         <ul>
-            <li><a href="about.php">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="register.php">Register</a></li>
-            <li><a href="forget-password.php">Forget-Password</a></li>
-            <li><div class="search_bar"><input class="search_b" type="text" name="search" placeholder="Search.."></div></li>
+            <li><a href="index2.php?products">Products</a></li>
+            <li><a href="index2.php?brands">Brands</a></li>
+            <li><a href="index2.php?categories">categories</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color: darkred">
+                        <a href="logout.php">
+                            <i class="fa fa-sign-out-alt"></i> User logout</a>
+                    </button>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
 <!--<hr>-->
 <main class="homeindex">
-     <div id="content">
+    <div id="content">
         <div>
             <h2><?php echo @$_GET['logged_in']?></h2>
             <?php
-            if(isset($_GET['index2'])){
-                include ('index2.php');
+            if(isset($_GET['products'])){
+                include ('products.php');
+            }
+            else if(isset($_GET['brands'])){
+                include ('brands.php');
+            }
+            else if(isset($_GET['categories'])){
+                include ('categories.php');
             }
             ?>
         </div>

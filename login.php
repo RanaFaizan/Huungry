@@ -20,7 +20,7 @@ if(isset($_POST['login'])){
             setcookie('user_email','' );
             setcookie('user_pass', '');
         }
-        header('location:index.php?logged_in=You have successfully logged in!');
+        header('location:index2.php?logged_in=You have successfully logged in!');
     }
 }
 ?>
