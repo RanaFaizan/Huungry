@@ -25,7 +25,7 @@ require_once "db_connection.php";
 </head>
 <body class="col col-12">
 <header>
-    <nav>
+    <nav style="margin-top: -1%; margin-left: -1.3%">
         <div>
             <a href="index2.php"><img src="images/logo1.png" alt="Home"></a>
         </div>
@@ -49,7 +49,6 @@ require_once "db_connection.php";
 <main class="homeindex">
     <div id="content">
         <div>
-            <h2><?php echo @$_GET['logged_in']?></h2>
             <?php
             if(isset($_GET['products'])){
                 include ('products.php');

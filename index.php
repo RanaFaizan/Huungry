@@ -1,8 +1,3 @@
-<?php
-
-require_once "db_connection.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +13,10 @@ require_once "db_connection.php";
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
 </head>
 <body class="col col-12">
 <header>
-    <nav>
+    <nav style="margin-left: -1.3%">
         <div>
             <a href="index.php"><img src="images/logo1.png" alt="Home"></a>
         </div>
@@ -38,8 +32,17 @@ require_once "db_connection.php";
     </nav>
 </header>
 <!--<hr>-->
-<main class="homeindex">
-     <div id="content">
+<main>
+    <div class="row">
+        <div class="col-12" style="margin-top: 4.8%;">
+                <img class="mySlides" src="images/slider1.jpg">
+                <img class="mySlides" src="images/slider2.jpg">
+                <img class="mySlides" src="images/slider3.jpg">
+                <img class="mySlides" src="images/slider4.jpg">
+        </div>
+    </div>
+
+    <div id="content">
         <div>
             <h2><?php echo @$_GET['logged_in']?></h2>
             <?php
@@ -102,10 +105,6 @@ require_once "db_connection.php";
     </div>
 
 </footer>
-
 <script src="js/slider.js"></script>
-<script src="../js/jquery-3.3.1.js"></script>
-<script src="../js/bootstrap.bundle.js"></script>
-
 </body>
 </html>
