@@ -63,21 +63,14 @@ require_once "db_connection.php";
 </header>
 <!--<hr>-->
 <main class="homeindex">
-<!--    <div id="content">-->
-<!--        <div>-->
-<!--            --><?php
-//            if(isset($_GET['products'])){
-//                include 'products.php';
-//            }
-//            else if(isset($_GET['brands'])){
-//                include ('brands.php');
-//            }
-//            else if(isset($_GET['categories'])){
-//                include ('categories.php');
-//            }
-//            ?>
-<!--        </div>-->
-<!--    </div>-->
+    <div class="row">
+        <div class="col-12" style="margin-top: 4.8%;">
+            <img class="mySlides" src="images/slider1.jpg">
+            <img class="mySlides" src="images/slider2.jpg">
+            <img class="mySlides" src="images/slider3.jpg">
+            <img class="mySlides" src="images/slider4.jpg">
+        </div>
+    </div>
 </main>
 <!--<hr>-->
 <footer>
@@ -135,6 +128,6 @@ require_once "db_connection.php";
 <script src="js/slider.js"></script>
 <script src="../js/jquery-3.3.1.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
-
+<script src="js/slider.js"></script>
 </body>
 </html>
