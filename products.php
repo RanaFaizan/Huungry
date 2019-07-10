@@ -1,6 +1,8 @@
 <?php
+session_start();
 if(!isset($_SESSION['user_email'])){
     header('location: login.php?not_admin=You are not Admin!');
+
 }
 require_once "db_connection.php";
 ?>
@@ -17,6 +19,7 @@ require_once "db_connection.php";
     <meta name="author" content="Rana Faizan Ur Rahman Khan, Hamza Rehman">
 
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\dropdown_image.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -24,7 +27,41 @@ require_once "db_connection.php";
 </head>
 <body class="col col-12">
 <header>
+    <nav style="margin-top: -1%; margin-left: -1.3%">
+        <div>
+            <a href="index2.php"><img src="images/logo1.png" alt="Home"></a>
+        </div>
 
+        <ul>
+            <?php
+
+            $cus_id = $_GET['cus_id'];
+            $catQuery = "select * from customers where cus_id='$cus_id'";
+            $catQueryResult = mysqli_query($con,$catQuery);
+            $row = mysqli_fetch_assoc($catQueryResult);
+            $cus_img = $row['cus_img'];
+
+
+            echo"<li><a href=\"products.php?cus_id=$cus_id\">Products</a></li>
+                    <li><a href=\"brands.php?cus_id=$cus_id\">Brands</a></li>
+                    <li><a href=\"categories.php?cus_id=$cus_id\">categories</a></li>";
+
+            echo"<li>
+                    <div class=\"dropdown\">
+                         <button class=\"dropbtn\" style=\"background-color: darkred\">
+                                <a href=\"logout.php\">
+                                 <i class=\"fa fa-sign-out-alt\"></i> User logout</a>
+                        </button>
+
+
+                        <div  class=\"dropdown-content\">
+                            <label for=\"fname\"><img style='width: 100%; height: 100%;' src='admin/product_images/$cus_img'></label>
+                        </div>
+                    </div>
+                    </li>";
+            ?>
+        </ul>
+    </nav>
 </header>
 <!--<hr>-->
 <main class="homeindex">
@@ -50,6 +87,7 @@ require_once "db_connection.php";
             <?php
             $catQuery = "select * from products";
             $catQueryResult = mysqli_query($con,$catQuery);
+
 
             while($row = mysqli_fetch_assoc($catQueryResult))
             {

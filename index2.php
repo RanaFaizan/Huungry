@@ -2,6 +2,7 @@
 session_start();
 if(!isset($_SESSION['user_email'])){
     header('location: login.php?not_admin=You are not Admin!');
+
 }
 require_once "db_connection.php";
 ?>
@@ -32,53 +33,51 @@ require_once "db_connection.php";
         </div>
 
         <ul>
-            <li><a href="index2.php?products">Products</a></li>
-            <li><a href="index2.php?brands">Brands</a></li>
-            <li><a href="index2.php?categories">categories</a></li>
-            <li>
-                <div class="dropdown">
-                    <button class="dropbtn" style="background-color: darkred">
-                        <a href="logout.php">
-                            <i class="fa fa-sign-out-alt"></i> User logout</a>
-                    </button>
-
-                    <?php
-
+            <?php
                     $cus_id = $_GET['cus_id'];
                     $catQuery = "select * from customers where cus_id='$cus_id'";
                     $catQueryResult = mysqli_query($con,$catQuery);
                     $row = mysqli_fetch_assoc($catQueryResult);
                     $cus_img = $row['cus_img'];
-                    echo "<div  class=\"dropdown-content\">
-                        <label for=\"fname\"><img style='width: 100%; height: 100%;' src='admin/product_images/$cus_img'></label>
-                    </div>"
 
-                    ?>
-<!--                    <div class="dropdown-content">-->
-<!--                        <a href="index.php?insert_product">Insert New Product</a>-->
-<!--                    </div>-->
-                </div>
-            </li>
+                    echo"<li><a href=\"products.php?cus_id=$cus_id\">Products</a></li>
+                    <li><a href=\"brands.php?cus_id=$cus_id\">Brands</a></li>
+                    <li><a href=\"categories.php?cus_id=$cus_id\">categories</a></li>";
+
+                    echo"<li>
+                    <div class=\"dropdown\">
+                         <button class=\"dropbtn\" style=\"background-color: darkred\">
+                                <a href=\"logout.php\">
+                                 <i class=\"fa fa-sign-out-alt\"></i> User logout</a>
+                        </button>
+
+
+                        <div  class=\"dropdown-content\">
+                            <label for=\"fname\"><img style='width: 100%; height: 100%;' src='admin/product_images/$cus_img'></label>
+                        </div>
+                    </div>
+                    </li>";
+            ?>
         </ul>
     </nav>
 </header>
 <!--<hr>-->
 <main class="homeindex">
-    <div id="content">
-        <div>
-            <?php
-            if(isset($_GET['products'])){
-                include ('products.php');
-            }
-            else if(isset($_GET['brands'])){
-                include ('brands.php');
-            }
-            else if(isset($_GET['categories'])){
-                include ('categories.php');
-            }
-            ?>
-        </div>
-    </div>
+<!--    <div id="content">-->
+<!--        <div>-->
+<!--            --><?php
+//            if(isset($_GET['products'])){
+//                include 'products.php';
+//            }
+//            else if(isset($_GET['brands'])){
+//                include ('brands.php');
+//            }
+//            else if(isset($_GET['categories'])){
+//                include ('categories.php');
+//            }
+//            ?>
+<!--        </div>-->
+<!--    </div>-->
 </main>
 <!--<hr>-->
 <footer>
