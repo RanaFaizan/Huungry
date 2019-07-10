@@ -68,6 +68,7 @@ if(!$con)
                         $pro_desc = $row['pro_desc'];
                         $pro_keywords = $row['pro_keywords'];
                         $pro_img = $row['pro_img'];
+                        echo "<hr>";
                         echo "<div class=\"row\">
                             <div class=\"col col-1\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_id</span></label></div>
                             <div class=\"col col-2\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_title</span></label></div>
@@ -91,6 +92,7 @@ if(!$con)
                                      </div>
                              </div>";
                     }
+                    echo "<hr>";
                     ?>
         </div>
     </div>

@@ -28,17 +28,20 @@ require_once "db_connection.php";
 <body class="col col-12">
 <header>
     <nav style="margin-top: -1%; margin-left: -1.3%">
-        <div>
-            <a href="index2.php"><img src="images/logo1.png" alt="Home"></a>
-        </div>
 
-        <ul>
-            <?php
+        <?php
                     $cus_id = $_GET['cus_id'];
                     $catQuery = "select * from customers where cus_id='$cus_id'";
                     $catQueryResult = mysqli_query($con,$catQuery);
                     $row = mysqli_fetch_assoc($catQueryResult);
                     $cus_img = $row['cus_img'];
+
+        echo "<div>
+            <a href=\"index2.php?cus_id=$cus_id\"><img src=\"images/logo1.png\" alt=\"Home\"></a>
+        </div>";
+
+        echo "<ul>";
+
 
                     echo"<li><a href=\"products.php?cus_id=$cus_id\">Products</a></li>
                     <li><a href=\"brands.php?cus_id=$cus_id\">Brands</a></li>
@@ -57,18 +60,64 @@ require_once "db_connection.php";
                         </div>
                     </div>
                     </li>";
+                    echo"</ul>";
             ?>
-        </ul>
+
     </nav>
 </header>
 <!--<hr>-->
 <main class="homeindex">
-    <div class="row">
-        <div class="col-12" style="margin-top: 4.8%;">
+    <div class="fullcontainer">
+
+        <div class="col col-12" style="margin-top: 4.8%;margin-bottom: -55%;">
             <img class="mySlides" src="images/slider1.jpg">
             <img class="mySlides" src="images/slider2.jpg">
             <img class="mySlides" src="images/slider3.jpg">
             <img class="mySlides" src="images/slider4.jpg">
+        </div>
+
+        <div class="container col-10" style="margin-top: 25%;">
+
+
+
+            <div class="row">
+                <div class="col-12">
+                    <h1>Our Products</h1>
+                </div>
+            </div>
+
+            <div class="row" style="font-size: larger; margin-bottom: 5%">
+
+                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>IMAGE</b></span></label></div>
+                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>TITLE</b></span></label></div>
+                <div class="col col-3"><label for="fname"><span style="color: #721c24"><b>BRAND</b></span></label></div>
+                <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>PRICE</b></span></label></div>
+
+            </div>
+
+
+            <?php
+            $catQuery = "select * from products";
+            $catQueryResult = mysqli_query($con,$catQuery);
+
+
+            while($row = mysqli_fetch_assoc($catQueryResult))
+            {
+                $pro_title = $row['pro_title'];
+                $pro_brand = $row['pro_brand'];
+                $pro_price = $row['pro_price'];
+                $pro_img = $row['pro_img'];
+                echo "<hr>";
+                echo "<div class=\"row\">
+                            
+                            <div class=\"col col - 3\"><label for=\"fname\"><img src='admin/product_images/$pro_img' width='80' height='80'></label></div>
+                            <div class=\"col col-3\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_title</span></label></div>
+                            <div class=\"col col-3\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_brand</span></label></div>
+                            <div class=\"col col-2\"  style='margin-top: 2%;'><label for=\"fname\"><span>$pro_price</span></label></div>
+                        </div>";
+            }
+            echo "<hr>";
+            ?>
         </div>
     </div>
 </main>

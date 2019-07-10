@@ -59,6 +59,7 @@ if(!$con)
                     $cat_id = $row['cat_id'];
                     $cat_title = $row['cat_title'];
                     $cat_img = $row['cat_img'];
+                    echo "<hr>";
                     echo "<div class=\"row\">
                             <div class=\"col col-1\"   style='margin-top: 2%;'><label for=\"fname\"><span>$cat_id</span></label></div>
                             <div class=\"col col-2\"   style='margin-top: 2%;'><label for=\"fname\"><span>$cat_title</span></label></div>
@@ -79,6 +80,7 @@ if(!$con)
                                      </div>
                              </div>";
                 }
+                echo "<hr>";
                 ?>
 
 

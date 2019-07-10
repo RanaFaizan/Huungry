@@ -28,25 +28,26 @@ require_once "db_connection.php";
 <body class="col col-12">
 <header>
     <nav style="margin-top: -1%; margin-left: -1.3%">
-        <div>
-            <a href="index2.php"><img src="images/logo1.png" alt="Home"></a>
-        </div>
 
-        <ul>
-            <?php
+        <?php
+        $cus_id = $_GET['cus_id'];
+        $catQuery = "select * from customers where cus_id='$cus_id'";
+        $catQueryResult = mysqli_query($con,$catQuery);
+        $row = mysqli_fetch_assoc($catQueryResult);
+        $cus_img = $row['cus_img'];
 
-            $cus_id = $_GET['cus_id'];
-            $catQuery = "select * from customers where cus_id='$cus_id'";
-            $catQueryResult = mysqli_query($con,$catQuery);
-            $row = mysqli_fetch_assoc($catQueryResult);
-            $cus_img = $row['cus_img'];
+        echo "<div>
+            <a href=\"index2.php?cus_id=$cus_id\"><img src=\"images/logo1.png\" alt=\"Home\"></a>
+        </div>";
+
+        echo "<ul>";
 
 
-            echo"<li><a href=\"products.php?cus_id=$cus_id\">Products</a></li>
+        echo"<li><a href=\"products.php?cus_id=$cus_id\">Products</a></li>
                     <li><a href=\"brands.php?cus_id=$cus_id\">Brands</a></li>
                     <li><a href=\"categories.php?cus_id=$cus_id\">categories</a></li>";
 
-            echo"<li>
+        echo"<li>
                     <div class=\"dropdown\">
                          <button class=\"dropbtn\" style=\"background-color: darkred\">
                                 <a href=\"logout.php\">
@@ -59,8 +60,9 @@ require_once "db_connection.php";
                         </div>
                     </div>
                     </li>";
-            ?>
-        </ul>
+        echo"</ul>";
+        ?>
+
     </nav>
 </header>
 <main class="homeindex">
@@ -90,12 +92,14 @@ require_once "db_connection.php";
                 {
                     $brand_img = $row['brand_img'];
                     $brand_title = $row['brand_title'];
+                    echo "<hr>";
 
                     echo "<div class=\"row\">
                             <div class=\"col col - 3\"><label for=\"fname\"><img src='admin/product_images/$brand_img' width='80' height='80'></label></div>
                             <div class=\"col col-2\" style='margin-top: 2%;'><label for=\"fname\"><span>$brand_title</span></label></div>
                         </div>";
                 }
+                echo "<hr>";
                 ?>
             </form>
         </div>

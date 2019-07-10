@@ -72,6 +72,7 @@ if(!$con)
                     $city = $row['city'];
                     $cus_pass = $row['cus_pass'];
                     $cus_img = $row['cus_img'];
+                    echo "<hr>";
                     echo "<div class=\"row\">
                             <div class=\"col col-1\"><label for=\"fname\"><span><b>$cus_id</b></span></label></div>
                             <div class=\"col col-1\"><label for=\"fname\"><span><b>$first_name</b></span></label></div>
@@ -96,6 +97,7 @@ if(!$con)
                                      </div>
                              </div>";
                 }
+                echo "<hr>";
                 ?>
 
 
