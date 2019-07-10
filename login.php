@@ -8,6 +8,8 @@ if(isset($_POST['login'])){
     $sel_user = "select * from customers where email='$email' AND cus_pass='$pass'";
     $run_user = mysqli_query($con, $sel_user);
     $check_user = mysqli_num_rows($run_user);
+    $row = mysqli_fetch_assoc($run_user);
+    $cus_id = $row['cus_id'];
     if($check_user==0){
         $error_msg = 'Password or Email is wrong, try again';
     }
@@ -20,7 +22,7 @@ if(isset($_POST['login'])){
             setcookie('user_email','' );
             setcookie('user_pass', '');
         }
-        header('location:index2.php?logged_in=You have successfully logged in!');
+        header('location:index2.php?cus_id='.$cus_id);
     }
 }
 ?>

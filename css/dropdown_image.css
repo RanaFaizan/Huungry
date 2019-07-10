@@ -1,0 +1,37 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: red;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20% 30%;
+    z-index: 1;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,23 +1,27 @@
 <?php
+//if(!isset($_SESSION['user_email'])){
+//    header('location: login.php?not_admin=You are not Admin!');
+//}
 $con = mysqli_connect("localhost","root","","huungry");
-if(!$con)
-{
-    echo "Not Connected";
-}
-if(isset($_POST['insert_pro']))
-{
+if(isset($_POST['insert_pro'])){
+    //getting text data from the fields
 
-    $title =  $_POST['pro_title'];
-    $cat =  $_POST['pro_cat'];
-    $brand =  $_POST['pro_brand'];
-    $price =  $_POST['pro_price'];
-    $desc =  $_POST['pro_desc'];
-    $keywords =  $_POST['pro_keywords'];
+    $pro_title = $_POST['pro_title'];
+    $pro_cat = $_POST['pro_cat'];
+    $pro_brand = $_POST['pro_brand'];
+    $pro_price = $_POST['pro_price'];
+    $pro_desc = $_POST['pro_desc'];
+    $pro_keywords = $_POST['pro_keywords'];
 
-    //getting image from the field
+
     $pro_image_name = $_FILES['pro_img']['name'];
     $pro_image_tmp = $_FILES['pro_img']['tmp_name'];
     $pro_image_size = $_FILES['pro_img']['size'];
+    //getting image from the field
+//    $pro_image = $_FILES['pro_image']['name'];
+//    $pro_image_tmp = $_FILES['pro_image']['tmp_name'];
+//
+//    move_uploaded_file($pro_image_tmp,"product_images/$pro_image");
 
     if (file_exists($pro_image_tmp))
     {
@@ -36,7 +40,9 @@ if(isset($_POST['insert_pro']))
             $response = array(
                 "type" => "warning",
                 "message" => "Upload valid images. Only PNG and JPEG are allowed."
+
             );
+
             //echo $result;
         }    // Validate image file size
         else if ($pro_image_size > 2000000) {
@@ -45,26 +51,22 @@ if(isset($_POST['insert_pro']))
                 "message" => "Image size exceeds 2MB"
             );
         }    // Validate image file dimension
-        else if ($width > "1920" || $height > "1080") {
+        else if ($width > "3000" || $height > "3000") {
             $response = array(
                 "type" => "warning",
                 "message" => "Image dimension should be within 1000X800"
             );
+            echo $pro_image_name;
         } else {
             $updated_img_name = "user_" . time() . "_" . $pro_image_name;
             echo $updated_img_name;
             $target = $target_directory . $updated_img_name;
             if (move_uploaded_file($pro_image_tmp, $target)) {
-
-                $q = "insert into products (pro_title,pro_cat,pro_brand,pro_price,pro_desc,pro_img,pro_keywords)
-            values('$title','$cat','$brand','$price','$desc','$updated_img_name','$keywords')";
+                $q = "insert into products (pro_title,pro_brand,pro_cat,pro_price,pro_desc,pro_img,pro_keywords)
+                values('$pro_title','$pro_brand','$pro_cat','$pro_price','$pro_desc','$updated_img_name','$pro_keywords')";
                 $insert_pro = mysqli_query($con, $q);
                 if ($insert_pro) {
-                    //header("location: ".$_SERVER['PHP_SELF']);
-                    $response = array(
-                        "type" => "success",
-                        "message" => "Product uploaded successfully."
-                    );
+                    header("location: index.php?view_products");
                 }
 
 
@@ -76,11 +78,6 @@ if(isset($_POST['insert_pro']))
             }
         }
     }
-
-    //print_r($_POST);
-//
-//    $q = "insert into products (pro_title,pro_cat,pro_brand,pro_price,pro_desc,pro_keywords)
-//            values('$title','$cat','$brand','$price','$desc','$keywords')";
 }
 ?>
 

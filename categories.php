@@ -40,7 +40,7 @@ require_once "db_connection.php";
 
                 <div class="row" style="font-size: larger; margin-bottom: 5%">
 
-                    <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>ID</b></span></label></div>
+                    <div class="col col-1"><label for="fname"><span style="color: #721c24"><b>IMAGE</b></span></label></div>
                     <div class="col col-2"><label for="fname"><span style="color: #721c24"><b>TITLE</b></span></label></div>
 
                 </div>
@@ -52,11 +52,11 @@ require_once "db_connection.php";
 
                 while($row = mysqli_fetch_assoc($catQueryResult))
                 {
-                    $cat_id = $row['cat_id'];
+                    $cat_img = $row['cat_img'];
                     $cat_title = $row['cat_title'];
                     echo "<div class=\"row\">
-                            <div class=\"col col-1\"><label for=\"fname\"><span>$cat_id</span></label></div>
-                            <div class=\"col col-2\"><label for=\"fname\"><span>$cat_title</span></label></div>
+                            <div class=\"col col - 3\"><label for=\"fname\"><img src='admin/product_images/$cat_img' width='80' height='80'></label></div>
+                            <div class=\"col col-2\" style='margin-top: 2%;'><label for=\"fname\"><span>$cat_title</span></label></div>
                         </div>";
                 }
                 ?>
